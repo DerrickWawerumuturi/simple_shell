@@ -1,69 +1,104 @@
-0x16. C - Simple Shell
-📄 🚀
+# Simple Shell
 
-Description
+🚀 **A Milestone Project in C Programming**  
 
-This project is an implementation of the shell created as a Milestone Project for the C code at ALX Africa Software Engineering.
-The gates of shell is a project in the first trimester, that helps student to understand the advanced concepts behind the shell program include process, system call, bit manipulation, file managment, error handling ...
-Shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh).
-This program was written entirely in C Language.
+---
 
-COPYRIGHT
-Copyright (C) 2022 by Reny Kipkoech and Stellah Mbao
-All rights reserved
+## **Overview**
 
-Description :
-This is a shell written in C. It is based on the Thompson Shell.
+This project is a custom implementation of a simple UNIX shell, created as part of the ALX Africa Software Engineering program. The project serves as an introduction to advanced programming concepts such as process management, system calls, file handling, error handling, and more. The shell replicates the basic functionalities of the Thompson Shell.
 
-Environment :
-Our shell was built and tested on Ubuntu 14.04 LTS.
+---
 
-Features
-Display a prompt and wait for the user to type a command. A command line always ends with a new line.
-If an executable cannot be found, print an error message and display the prompt again.
-Handle errors.
-Hndling the “end of file” condition (Ctrl+D)
-Hanling the command line with arguments
-Handle the PATH
-Support the exit features and the exit status
-Handle the Ctrl-C to not terminate the shell
-Handling the command seperator ;
-Handling && and || logical operators
-Handle variable replacements $? and $$
-Handle the comments #
-Support the history feature
-Support the file input
-Builtins
-Our shell has support for the following built-in commands:
+## **Features**
 
-Command	Definition
-exit [n]	Exit the shell, with an optional exit status, n.
-env	Print the environment.
-setenv [var][value]	Set an environment variable and value. If the variable exists, the value will be updated.
-alias[name[='value]]	Reads aliases name
-unsetenv [var]	Remove an environment variable.
-cd [dir]	Change the directory.
-help [built-in]	Read documentation for a built-in.
-Installation : Getting HSH
-Clone the below repository and compile the files into an executable using the GCC compiler.
+- **Interactive Prompt:** Displays a prompt and waits for user input, ensuring each command ends with a newline.
+- **Error Handling:** Prints an error message if an executable cannot be found, then re-displays the prompt.
+- **End-of-File Handling:** Supports handling of the `Ctrl+D` EOF condition.
+- **Command Line Arguments:** Accepts and processes commands with arguments.
+- **PATH Resolution:** Locates executables using the `PATH` environment variable.
+- **Exit Command:** Supports the `exit` command with optional exit status.
+- **Signal Handling:** Prevents termination of the shell with `Ctrl+C`.
+- **Command Separators:** Handles command separators (`;`).
+- **Logical Operators:** Implements logical operators (`&&` and `||`).
+- **Variable Replacement:** Handles variable replacements, including `$?` (last command status) and `$$` (process ID).
+- **Comments:** Supports comments using the `#` character.
+- **Command History:** Maintains a history of commands.
+- **File Input:** Allows command input from files.
 
-https://github.com/StellahMbao/simple_shell.git
-Basic usage 💡
-First, Fork this Repository Learn how to fork repo.
-Then Clone Learn how to clone .
-Create an executable by running the following command:
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
-From there, type in the following command and press your enter button.
-./hsh
-Final step: ENJOY!
-Example 💻
-ls -la
-114757753-e50c2180-9d64-11eb-95ea-fb9bba776c8c
+---
 
-Contributors :
-Reny Kipkoech
-Stellah Mbao
-Acknowledgments :
-The creators of the C language.
-Our software engineer-in-residence.
-Betty Holberton | Alx-Africa .
+## **Built-in Commands**
+
+| Command            | Description                                           |
+|--------------------|-------------------------------------------------------|
+| `exit [n]`         | Exits the shell, optionally with status `n`.          |
+| `env`              | Prints the environment variables.                    |
+| `setenv [var][value]` | Sets an environment variable with a value.         |
+| `unsetenv [var]`   | Removes an environment variable.                     |
+| `alias [name[='value']]` | Reads or sets an alias.                        |
+| `cd [dir]`         | Changes the current directory.                       |
+| `help [built-in]`  | Displays documentation for a built-in command.       |
+
+---
+
+## **Environment**
+
+The shell was built and tested on **Ubuntu 14.04 LTS**.
+
+---
+
+## **Installation**
+
+To install and use the shell, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/StellahMbao/simple_shell.git
+   ```
+
+2. Compile the source files:
+   ```bash
+   gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+   ```
+
+3. Run the shell:
+   ```bash
+   ./hsh
+   ```
+
+---
+
+## **Usage**
+
+- Example command:
+  ```bash
+  ls -la
+  ```
+- Output:
+  ```
+  drwxr-xr-x 2 user user 4096 Jan 21 12:34 .
+  drwxr-xr-x 3 user user 4096 Jan 21 12:34 ..
+  -rw-r--r-- 1 user user 1234 Jan 21 12:34 file.txt
+  ```
+
+---
+
+## **Contributors**
+
+- **Derrick Muturi**  
+- **Felix Kamue**
+
+---
+
+## **Acknowledgments**
+
+- The creators of the C programming language.  
+- Betty Holberton | ALX Africa.  
+- Our Software Engineer-in-Residence for guidance and support.
+
+---
+
+## **License**
+
+**Copyright (C) 2022 by Derrick Muturi and Felix Kamau. All rights reserved.**
