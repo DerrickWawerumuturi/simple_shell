@@ -54,7 +54,7 @@ To install and use the shell, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/StellahMbao/simple_shell.git
+   git clone https://github.com/DerrickWawerumuturi/simple_shell.git
    ```
 
 2. Compile the source files:
